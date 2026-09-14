@@ -20,7 +20,7 @@ def show_room_info():
 
 def check_availability():
     if is_available:
-        return "Помещение доступно для бронирования."
+        return "Помещение доступно для бронирования. "
     return "Помещение уже занято."
 
 
