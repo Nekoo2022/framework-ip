@@ -1,0 +1,49 @@
+body {
+    background: #f4efe6;
+    color: #2b241c;
+}
+
+.studio-header {
+    background: #2b241c;
+    color: #f4efe6;
+}
+
+.studio-brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.studio-tagline {
+    color: #e2c28a;
+}
+
+.studio-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+}
+
+.studio-nav {
+    background: #3d342b;
+}
+
+.studio-nav .nav-link {
+    color: #f4efe6;
+    padding: 0.7rem 0.2rem;
+}
+
+.studio-nav .nav-link.active {
+    color: #e2c28a;
+    text-decoration: underline;
+}
+
+.room-card {
+    border: 0;
+    border-top: 4px solid #c47b2b;
+    box-shadow: 0 8px 20px rgba(43, 36, 28, 0.08);
+}
+
+.studio-footer {
+    background: #2b241c;
+    color: #f4efe6;
+}

@@ -1,0 +1,16 @@
+<div class="card mb-3 room-card">
+    <div class="card-body">
+        <h2 class="h5 card-title">
+            <a href="{% url 'rooms:detail' room.id %}">{{ room.name }}</a>
+        </h2>
+        <p class="card-text mb-1">Вместимость: {{ room.capacity }} мест</p>
+        <p class="card-text mb-1">
+            Цена часа: {{ room.price_per_hour }} руб.
+        </p>
+        {% if room.equipment %}
+            <p class="card-text mb-0">
+                Оборудование: {{ room.equipment|join:", "|default:"—" }}
+            </p>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Бронирования{% endblock %}
+
+{% block content %}
+    <h1>Бронирования</h1>
+    <p>Всего записей: {{ bookings|length }}</p>
+    {% for booking in bookings %}
+        <article class="card mb-3 room-card">
+            <div class="card-body">
+                <h2 class="h5">
+                    <a href="{% url 'bookings:detail' booking.id %}">
+                        Бронирование №{{ booking.id }}
+                    </a>
+                    {% include "bookings/includes/booking_status.html" %}
+                </h2>
+                <p class="mb-1">{{ booking.room.name }}</p>
+                <p class="mb-1">{{ booking.musician.name }}, {{ booking.musician.instrument|capfirst }}</p>
+                <p class="mb-0">
+                    {{ booking.booking_date|date:"d.m.Y" }},
+                    {{ booking.start_time }},
+                    {{ booking.hours }} ч.,
+                    {{ booking.total_price }} руб.
+                </p>
+            </div>
+        </article>
+    {% empty %}
+        <p>Бронирований пока нет.</p>
+    {% endfor %}
+{% endblock %}

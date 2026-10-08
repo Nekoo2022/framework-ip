@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Бронирование не найдено{% endblock %}
+
+{% block content %}
+    <h1 class="text-danger">Бронирование не найдено</h1>
+    <p>Проверьте номер бронирования.</p>
+    <a href="{% url 'bookings:list' %}" class="btn btn-outline-secondary">
+        К списку бронирований
+    </a>
+{% endblock %}

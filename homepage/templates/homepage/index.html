@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Главная — {{ project_name }}{% endblock %}
+
+{% block content %}
+    <h1 class="display-6">Репетиционные для музыкантов</h1>
+    <p class="lead">
+        Сервис показывает залы, проверяет занятость на выбранный день
+        и считает стоимость аренды.
+    </p>
+    <p>
+        Сейчас в базе {{ rooms_count|default:"0" }} помещений,
+        {{ musicians_count }} музыкантов
+        и {{ bookings_count }} бронирований.
+    </p>
+    <a href="{% url 'rooms:list' %}" class="btn btn-primary me-2">Помещения</a>
+    <a href="{% url 'bookings:list' %}" class="btn btn-secondary">Бронирования</a>
+{% endblock %}

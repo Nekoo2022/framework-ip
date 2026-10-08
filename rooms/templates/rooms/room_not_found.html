@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Помещение не найдено{% endblock %}
+
+{% block content %}
+    <h1 class="text-danger">Помещение не найдено</h1>
+    <p>Проверьте номер помещения.</p>
+    <a href="{% url 'rooms:list' %}" class="btn btn-outline-secondary">
+        К списку помещений
+    </a>
+{% endblock %}

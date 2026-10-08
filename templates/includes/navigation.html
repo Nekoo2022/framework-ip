@@ -1,0 +1,19 @@
+<nav class="studio-nav">
+    <div class="container d-flex gap-2">
+        <a
+            class="nav-link"
+            data-nav="/"
+            href="{% url 'homepage:index' %}"
+        >Главная</a>
+        <a
+            class="nav-link"
+            data-nav="/rooms/"
+            href="{% url 'rooms:list' %}"
+        >Помещения</a>
+        <a
+            class="nav-link"
+            data-nav="/bookings/"
+            href="{% url 'bookings:list' %}"
+        >Бронирования</a>
+    </div>
+</nav>

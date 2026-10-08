@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Помещения{% endblock %}
+
+{% block content %}
+    <h1>Помещения</h1>
+    <p>Найдено: {{ rooms|length }}</p>
+    {% for room in rooms %}
+        {% include "rooms/includes/room_card.html" %}
+    {% empty %}
+        <p>Помещения пока не добавлены.</p>
+    {% endfor %}
+{% endblock %}

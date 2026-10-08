@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ room.name }}{% endblock %}
+
+{% block content %}
+    <div class="card room-card">
+        <div class="card-body">
+            <h1 class="h3 card-title">{{ room.name }}</h1>
+            <p><strong>Номер:</strong> {{ room.id }}</p>
+            <p><strong>Вместимость:</strong> {{ room.capacity }} мест</p>
+            <p>
+                <strong>Цена часа с оборудованием:</strong>
+                {{ hour_price }} руб.
+            </p>
+            {% if room.equipment %}
+                <p>
+                    <strong>Оборудование:</strong>
+                    {{ room.equipment|join:", " }}
+                </p>
+            {% else %}
+                <p>Комплект оборудования не указан.</p>
+            {% endif %}
+            <p>
+                Доступность на {{ today|date:"d.m.Y" }}:
+                {% if available %}
+                    <span class="badge text-bg-success">доступно</span>
+                {% else %}
+                    <span class="badge text-bg-danger">занято</span>
+                {% endif %}
+            </p>
+            <p>{{ status_text }}</p>
+            <a
+                href="{% url 'rooms:list' %}"
+                class="btn btn-outline-secondary"
+            >К списку помещений</a>
+        </div>
+    </div>
+{% endblock %}
