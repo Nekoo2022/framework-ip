@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "room_id": 2,
+    "musician_id": 1,
+    "date": "2026-09-20",
+    "start_time": "18:00",
+    "hours": 3,
+    "is_cancelled": false
+  },
+  {
+    "id": 2,
+    "room_id": 1,
+    "musician_id": 2,
+    "date": "2026-10-08",
+    "start_time": "16:00",
+    "hours": 2,
+    "is_cancelled": false
+  },
+  {
+    "id": 3,
+    "room_id": 3,
+    "musician_id": 3,
+    "date": "2026-10-12",
+    "start_time": "19:00",
+    "hours": 4,
+    "is_cancelled": false
+  },
+  {
+    "id": 4,
+    "room_id": 2,
+    "musician_id": 3,
+    "date": "2026-10-15",
+    "start_time": "12:00",
+    "hours": 2,
+    "is_cancelled": true
+  }
+]

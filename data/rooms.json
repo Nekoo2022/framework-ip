@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Репетиционная №1",
+    "capacity": 4,
+    "price_per_hour": 900,
+    "type": "rehearsal",
+    "equipment": ["комбоусилитель", "микрофон"],
+    "equipment_fee": 200
+  },
+  {
+    "id": 2,
+    "name": "Репетиционная №2",
+    "capacity": 6,
+    "price_per_hour": 1200,
+    "type": "rehearsal",
+    "equipment": ["барабанная установка", "гитарный усилитель"],
+    "equipment_fee": 0
+  },
+  {
+    "id": 3,
+    "name": "Зал со звуком",
+    "capacity": 8,
+    "price_per_hour": 1800,
+    "type": "rehearsal",
+    "equipment": ["ударная установка", "пульт", "мониторы"],
+    "equipment_fee": 500
+  }
+]
